@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.controllers.newNoteController">
+   <children>
+      <VBox alignment="CENTER" layoutX="99.0" prefHeight="400.0" prefWidth="401.0" spacing="20.0">
+         <children>
+            <Label fx:id="mainLabel" text="What's on your mind today?">
+               <font>
+                  <Font name="Bodoni MT Italic" size="33.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" promptText="Write your note here..." wrapText="true">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </TextArea>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="402.0" spacing="50.0">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#switchToMainMenuView" text="Back">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="submitButton" mnemonicParsing="false" onAction="#processSubmission" text="Submit">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="errorMessage" layoutX="27.0" layoutY="369.0" textFill="RED">
+         <font>
+            <Font name="Bodoni MT Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
